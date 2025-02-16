@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen -تسجيل الدخول لحبيبتي </title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+  <!-- إضافة خط Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./logins.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    .login__input {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+    }
+
+    .button__text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .social-login h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+    }
+	h1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	background-color: antiquewhite;
+	font-size: 36px;
+	color: #ff0000;
+	text-align: center;
+	margin-top: 50px;
+  }
+  h2 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	background-color: antiquewhite;
+
+	font-size: 18px;
+	color: #333;
+	text-align: center;
+	margin-top: 20px;
+  }
+  </style>
+</head>
+<body>
+	<h1>!!!! حبيبتي ملاحظة هامة</h1>
+	<h2>اسم المستخدم هو تاريخ ميلادي بدون فواصل</h2>
+	<h2>الرقم السري هو تاريخ ميلادش بدون فواصل</h2>
+
+
+
+<!-- partial:index.partial.html -->
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" id="loginForm">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="اسم المستخدم " id="username">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="كلمة المرور" id="password">
+				</div>
+				<button type="button" class="button login__submit" onclick="validateLogin()">
+
+					<span class="button__text">تسجيل الدخول الآن</span>
+
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+				<h3>تسجيل الدخول عبر</h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+
+<script>
+  function validateLogin() {
+    // استرجاع القيم المدخلة
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    
+    // التحقق من القيم المدخلة
+    if (username === '02091996' && password === '31072001') {
+      alert('تم تسجيل الدخول بنجاح');
+	  window.location.href = 'login.html';
+    } else {
+      alert('اسم المستخدم أو كلمة المرور غير صحيحة');
+    }
+  }
+</script>
+
+</body>
+</html>
